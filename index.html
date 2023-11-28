@@ -13,7 +13,7 @@
         */ 
         * {
             /* change le box model */
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
         img {
             /* image responsive, largeur maxi */
@@ -26,6 +26,8 @@
             display: flex;
             /* largeur du parent */
             width: 100%;
+            /* permet de scroller horizontalement */
+            overflow-x: scroll;
         }
         .carrousel_ecran {
             /* largeur du parent pour chaque enfant */
@@ -42,7 +44,7 @@
 </head>
 <body>
     <div class="carrousel" x-data="{}">
-        <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"><</button><button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant">></button>
+        <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant">&lt; </button><button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant">></button>
         <div class="carrousel_parent-ecrans">
             <div id="ecran-1" class="carrousel_ecran">
                 <figure>
