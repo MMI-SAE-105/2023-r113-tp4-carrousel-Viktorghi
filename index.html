@@ -74,7 +74,18 @@
 </head>
 <body>
     <div class="carrousel" x-data="{}">
-        <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant">&lt; </button><button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant">></button>
+        <button 
+        @click = "p=$refs.parent; p.scrollLeft -=p.clientWidth"
+        class="carrousel_btn carrousel_btn-avant" 
+        aria-label="slideprécedant">
+            &lt; 
+        </button>
+        <button 
+        @click = "p=$refs.parent; p.scrollLeft =p.clientWidth"
+        class="carrousel_btn carrousel_btn-apres" 
+        aria-label="slidesuivant">
+            &lt;
+        </button>
         <div class="carrousel_parent-ecrans" x-ref="parent">
             <div id="ecran-1" class="carrousel_ecran">
                 <figure>
