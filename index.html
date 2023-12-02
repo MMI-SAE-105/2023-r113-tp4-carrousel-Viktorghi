@@ -67,7 +67,7 @@
             right: 0;
         }
         
-        .carroussel_liste-liens {
+        .caroussel_liste-liens {
         /* aligne horizontalement les enfants */
         display: flex;
         /* centre horizontalement les enfants */
@@ -80,6 +80,20 @@
         list-style: none;
         /* espace entre les enfants */
         gap: 1rem;
+        }
+
+        .caroussel_lien {
+            cursor: pointer;
+            background-color: rgb(69, 117, 117);
+            margin: 10px;
+            padding: 5px;
+            color:black;
+            box-shadow: 5 5 10px black;
+        }
+
+        .actif {
+            background-color: skyblue;
+            color: black;
         }
     </style>
 </head>
@@ -96,8 +110,9 @@
         <button 
         @click = "p=$refs.parent; p.scrollLeft +=p.clientWidth"
         class="carrousel_btn carrousel_btn-apres" 
-        aria-label="slidesuivant">
-            &lt;
+        aria-label="slidesuivant"
+        >
+        >
         </button>
         <div class="carrousel_parent-ecrans" x-ref="parent"
         @scroll.debounce.250ms.passive="hrefCourant = '#'+
