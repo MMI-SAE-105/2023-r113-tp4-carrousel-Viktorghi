@@ -44,6 +44,9 @@
 
         .carrousel {
             position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
         }
         .carrousel_btn {
             position: absolute;
@@ -51,7 +54,7 @@
             transform: translateY(-50%); /* methode du point mort */
             width: 2rem;
             height: 2rem;
-            background: rgba(0,0,0,0.5);
+            background: darkslateblue;
             border-radius: 50%;
             border: none;
             display: grid;
@@ -85,15 +88,16 @@
         .caroussel_lien {
             cursor: pointer;
             background-color: rgb(69, 117, 117);
-            margin: 10px;
-            padding: 5px;
+            margin: 14px;
+            padding: 8px;
             color:black;
-            box-shadow: 5 5 10px black;
+            border-radius: 5px;
         }
 
         .actif {
             background-color: skyblue;
             color: black;
+            font-weight: bold;
         }
     </style>
 </head>
